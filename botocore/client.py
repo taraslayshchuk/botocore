@@ -59,7 +59,8 @@ class ClientCreator(object):
                       credentials=None, scoped_config=None,
                       api_version=None,
                       client_config=None):
-        self._retry_config = client_config.retry_config
+        if client_config:
+            self._retry_config = client_config.retry_config
         service_model = self._load_service_model(service_name, api_version)
         cls = self._create_client_class(service_name, service_model)
         client_args = self._get_client_args(

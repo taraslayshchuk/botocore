@@ -80,15 +80,15 @@ class Config(object):
         Valid keys are:
 
         * 'max_attempts' -- The count value to use in retry logic after an
-        error raised, must be int.
+          error raised, must be int.
 
         * 'base' -- Start value to use in delay exponential function.
-        ``base`` can be set to 'rand' then a random number between 0 and 1
-        will be used as the base. Base must be greater than 0, otherwise a
-        ValueError will be raised.
+          ``base`` can be set to 'rand' then a random number between 0 and 1
+          will be used as the base. Base must be greater than 0, otherwise a
+          ValueError will be raised.
 
         * 'growth_factor' -- The time in seconds by which to increase the
-        delay after each attempt.
+          delay after each attempt.
     """
     OPTION_DEFAULTS = OrderedDict([
         ('region_name', None),
